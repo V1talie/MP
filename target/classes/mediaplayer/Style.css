@@ -186,7 +186,7 @@
 }
 
 #mainVBoxID{
-    
+    -fx-background-image: url('../images/file.jpg');
     -fx-background-repeat: no-repeat;
     -fx-background-size: 795 450;
     -fx-background-position: top center;

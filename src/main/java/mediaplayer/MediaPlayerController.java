@@ -143,6 +143,11 @@ List<Actions> actiuni = new ArrayList<>();
     }
 
     public void pauseVideo(ActionEvent event){
+        Actions pause = new Actions.Builder() //builder
+                .setName("Pause")
+                .setType("Click Button")
+                .setDescription("Video paused").build();
+        actiuni.add(pause);
         pauseButton.addEvent("pause");
         mediaPlayer.pause();
     }
@@ -157,6 +162,12 @@ List<Actions> actiuni = new ArrayList<>();
     }
 
     public void stopVideo(ActionEvent event){
+        Actions stop = new Actions.Builder() //builder
+                .setName("Stop")
+                .setType("Click Button")
+                .setDescription("Stops the video").build();
+        actiuni.add(stop);
+        playButton.addEvent("play");
         stopButton.addEvent("stop");
         mediaPlayer.stop();
     }
@@ -167,14 +178,14 @@ List<Actions> actiuni = new ArrayList<>();
                 .setType("Click Button")
                 .setDescription("Starts the video").build();
         actiuni.add(play);
-        /*for (   Actions actiune : actiuni) {
+        playButton.addEvent("play");
+        mediaPlayer.play();
+        mediaPlayer.setRate(1);
+         /*for (   Actions actiune : actiuni) {
             System.out.println(actiune.getName());
             System.out.println(actiune.getDescription());
             System.out.println(actiune.getType());
         }*/
-        playButton.addEvent("play");
-        mediaPlayer.play();
-        mediaPlayer.setRate(1);
     }
 
     public void skip5(ActionEvent event){
