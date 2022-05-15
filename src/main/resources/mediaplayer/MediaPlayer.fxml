@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mediaplayer.MediaPlayerController">
+    <center>
+        <StackPane fx:id="pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fx:id="mainVBoxID" alignment="BOTTOM_CENTER" prefHeight="405.0" prefWidth="600.0" StackPane.alignment="BOTTOM_CENTER">
+                    <children>
+                      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+                        <Slider fx:id="progressBar" />
+                        <HBox fx:id="mainHBox" alignment="BOTTOM_CENTER" maxHeight="40.0" prefHeight="30.0">
+                            <children>
+                                <Button fx:id="openFile" mnemonicParsing="false" onAction="#OpenFileMethod" text="OpenFile">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="playButtonID" mnemonicParsing="false" onAction="#playVideo" text="Play">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="pauseButtonID" mnemonicParsing="false" onAction="#pauseVideo" text="Pause">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="stopButtonID" mnemonicParsing="false" onAction="#stopVideo" text="Stop">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="b5ButtonID" mnemonicParsing="false" onAction="#back5" text="-5s">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="f5ButtonID" mnemonicParsing="false" onAction="#skip5" text="+5s">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Slider fx:id="volumeSlider">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                </Slider>
+                        <Pane prefHeight="50.0" prefWidth="12.0" />
+                        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="121.0">
+                           <children>
+                              <Button fx:id="saveButtonID" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveMem" prefHeight="25.0" prefWidth="101.0" text="Save Time">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="loadButtonID" mnemonicParsing="false" onAction="#loadMem" prefHeight="25.0" prefWidth="106.0" text="Load last" />
+                           </children>
+                        </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                    <StackPane.margin>
+                        <Insets />
+                    </StackPane.margin>
+                </VBox>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
